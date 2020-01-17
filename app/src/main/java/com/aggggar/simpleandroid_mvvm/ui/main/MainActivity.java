@@ -1,16 +1,32 @@
 package com.aggggar.simpleandroid_mvvm.ui.main;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 import com.aggggar.simpleandroid_mvvm.R;
+import com.aggggar.simpleandroid_mvvm.ui.base.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.ButterKnife;
+
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    public int setLayout() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public boolean setToolbar() {
+        return true;
+    }
+
+    @Override
+    public boolean hideStatusBar() {
+        return false;
     }
 }
