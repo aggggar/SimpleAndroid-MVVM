@@ -38,16 +38,16 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/rating"
+                android:text="@string/popularity"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/tvRating"
+                android:id="@+id/tvPopularity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/rating"
+                android:text="@string/popularity"
                 android:textColor="@color/white"
                 android:layout_marginStart="8dp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView"
@@ -55,27 +55,27 @@
                 app:layout_constraintTop_toTopOf="@+id/textView" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tvOverView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="@string/action_adventure_fantasy"
-                android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
+                android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dunkirk"
+                android:text="@string/dunkirk"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toTopOf="@+id/textView2"
-                app:layout_constraintStart_toStartOf="@+id/textView2" />
+                app:layout_constraintBottom_toTopOf="@+id/tvOverView"
+                app:layout_constraintStart_toStartOf="@+id/tvOverView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

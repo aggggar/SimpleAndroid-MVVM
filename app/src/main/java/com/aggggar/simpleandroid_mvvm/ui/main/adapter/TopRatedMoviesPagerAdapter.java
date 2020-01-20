@@ -3,6 +3,7 @@ package com.aggggar.simpleandroid_mvvm.ui.main.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
@@ -29,7 +30,10 @@ public class TopRatedMoviesPagerAdapter extends PagerAdapter {
         GlobalMethods.setImageToView(container.getContext(),
                 view.findViewById(R.id.ivMovieImage),
                 ApiEndPoints.IMAGE_URL + movie.getPosterPath());
-
+        ((TextView) view.findViewById(R.id.tvTitle)).setText(movie.getTitle());
+        ((TextView) view.findViewById(R.id.tvOverView)).setText(movie.getOverview());
+        ((TextView) view.findViewById(R.id.tvPopularity)).setText(String.valueOf(movie.getPopularity()));
+        container.addView(view);
         return view;
     }
 

@@ -17,8 +17,6 @@ import com.aggggar.simpleandroid_mvvm.ui.base.BaseDialogFragment;
  */
 public class ProgressDialogFragment extends BaseDialogFragment {
 
-
-
     @Override
     public View setView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_progress_dialog, container, false);

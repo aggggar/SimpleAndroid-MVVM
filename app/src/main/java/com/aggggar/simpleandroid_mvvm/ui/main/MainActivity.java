@@ -31,8 +31,15 @@ public class MainActivity extends BaseActivity {
                 dismissProgress();
             }
         });
+
+//        pagerMovies.setClipToPadding(false);
+//        pagerMovies.setPadding(16,0,16,0);
+//        pagerMovies.setPageMargin();
+
         mainViewModel.getTopRatedMovie().observe(this, movieListItem -> {
-            pagerMovies.setAdapter(new TopRatedMoviesPagerAdapter(movieListItem.getResults()));
+            TopRatedMoviesPagerAdapter topRatedMoviesPagerAdapter =
+                    new TopRatedMoviesPagerAdapter(movieListItem.getResults());
+            pagerMovies.setAdapter(topRatedMoviesPagerAdapter);
         });
     }
 
