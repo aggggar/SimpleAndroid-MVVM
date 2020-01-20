@@ -31,11 +31,6 @@ public class MainActivity extends BaseActivity {
                 dismissProgress();
             }
         });
-
-//        pagerMovies.setClipToPadding(false);
-//        pagerMovies.setPadding(16,0,16,0);
-//        pagerMovies.setPageMargin();
-
         mainViewModel.getTopRatedMovie().observe(this, movieListItem -> {
             TopRatedMoviesPagerAdapter topRatedMoviesPagerAdapter =
                     new TopRatedMoviesPagerAdapter(movieListItem.getResults());
