@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimpleAndroid-MVVM</string>
+    <string name="rating">Rating</string>
+    <string name="action_adventure_fantasy">action, adventure, fantasy</string>
 </resources>

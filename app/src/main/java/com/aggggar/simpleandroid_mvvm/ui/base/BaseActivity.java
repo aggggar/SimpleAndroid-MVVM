@@ -9,11 +9,15 @@ import android.view.WindowManager;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.DialogFragment;
 
 import com.aggggar.simpleandroid_mvvm.R;
+import com.aggggar.simpleandroid_mvvm.ui.dialogs.ProgressDialogFragment;
 
 
 public abstract class BaseActivity extends AppCompatActivity {
+
+    private DialogFragment progressDialogFragment;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,6 +42,17 @@ public abstract class BaseActivity extends AppCompatActivity {
             onBackPressed();
         }
         return true;
+    }
+
+    public void showProgress(){
+        progressDialogFragment = new ProgressDialogFragment();
+        progressDialogFragment.show(getSupportFragmentManager(), null);
+    }
+
+    public void dismissProgress(){
+        if (progressDialogFragment != null) {
+            progressDialogFragment.dismiss();
+        }
     }
 
     public abstract int setLayout();
